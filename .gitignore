@@ -1,0 +1,11 @@
+.bundle
+.DS_Store
+.idea
+cfoundry_client.iml
+.rakeTasks
+.yardoc
+doc/*
+log/*
+pkg/*
+vendor/*
+tmp/*
