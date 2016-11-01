@@ -1,5 +1,26 @@
-class CfoundryClient
+require 'rest-client'
+require 'json'
+require 'base64'
 
-end
-
+require 'cfoundry_client/auth'
+require 'cfoundry_client/constants'
+require 'cfoundry_client/info'
+require 'cfoundry_client/request'
 require 'cfoundry_client/version'
+
+class CfoundryClient
+  include Auth
+  include Constants
+  include Info
+  include Request
+
+  def initialize(url, options = {})
+    @url = url
+    @client_id = options.fetch(:client_id, DEFAULT_CLIENT_ID)
+    @client_secret = options.fetch(:client_secret, DEFAULT_CLIENT_SECRET)
+    @verify_ssl = options.fetch(:verify_ssl, true)
+    @connection = RestClient::Resource.new(@url, verify_ssl: @verify_ssl)
+    @authorization = nil
+    @refresh_token = nil
+  end
+end

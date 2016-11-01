@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/ausdto/cfoundry_client'
   s.license     = 'MIT'
 
+  s.add_runtime_dependency 'rest-client'
   s.add_development_dependency 'rspec'
 
   s.files       = `git ls-files`.split("\n")
