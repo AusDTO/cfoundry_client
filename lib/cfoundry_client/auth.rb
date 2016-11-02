@@ -20,6 +20,7 @@ class CfoundryClient
         response = JSON::parse(response, symbolize_names: true)
         @authorization = "#{response[:token_type]} #{response[:access_token]}"
         @refresh_token = response[:refresh_token]
+        true
       rescue RestClient::ExceptionWithResponse => err
         puts err.response
         raise

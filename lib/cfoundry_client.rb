@@ -4,15 +4,20 @@ require 'base64'
 
 require 'cfoundry_client/auth'
 require 'cfoundry_client/constants'
+require 'cfoundry_client/errors'
 require 'cfoundry_client/info'
+require 'cfoundry_client/paginator'
 require 'cfoundry_client/request'
+require 'cfoundry_client/spaces'
 require 'cfoundry_client/version'
 
 class CfoundryClient
   include Auth
   include Constants
+  include Errors
   include Info
   include Request
+  include Spaces
 
   def initialize(url, options = {})
     @url = url
