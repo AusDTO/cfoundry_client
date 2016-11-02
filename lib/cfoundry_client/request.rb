@@ -2,18 +2,22 @@ class CfoundryClient
   module Request
 
     def get(path, params = {})
+      before_request
       JSON.parse(subresource(path).get(headers.merge({params: params})), symbolize_names: true)
     end
 
     def post(path, body = {})
+      before_request
       JSON.parse(subresource(path).post(body.to_json, headers))
     end
 
     def put(path, body = {})
+      before_request
       JSON.parse(subresource(path).put(body.to_json, headers))
     end
 
     def delete(path)
+      before_request
       JSON.parse(subresource(path).delete(headers))
     end
 
@@ -37,6 +41,10 @@ class CfoundryClient
 
     def subresource(path)
       @connection[v2_path(path)]
+    end
+
+    def before_request
+      refresh_token_if_required
     end
   end
 end
