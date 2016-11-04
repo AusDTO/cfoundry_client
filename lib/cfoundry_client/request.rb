@@ -2,23 +2,27 @@ class CfoundryClient
   module Request
 
     def get(path, params = {})
-      before_request
-      JSON.parse(subresource(path).get(headers.merge({params: params})), symbolize_names: true)
+      wrap_request(path) do |connection|
+        connection.get(headers.merge({params: params}))
+      end
     end
 
     def post(path, body = {})
-      before_request
-      JSON.parse(subresource(path).post(body.to_json, headers))
+      wrap_request(path) do |connection|
+        connection.post(body.to_json, headers)
+      end
     end
 
     def put(path, body = {})
-      before_request
-      JSON.parse(subresource(path).put(body.to_json, headers))
+      wrap_request(path) do |connection|
+        connection.put(body.to_json, headers)
+      end
     end
 
     def delete(path)
-      before_request
-      JSON.parse(subresource(path).delete(headers))
+      wrap_request(path) do |connection|
+        connection.delete(headers)
+      end
     end
 
     private
@@ -39,12 +43,13 @@ class CfoundryClient
       end
     end
 
-    def subresource(path)
-      @connection[v2_path(path)]
-    end
-
-    def before_request
+    def wrap_request(path)
       refresh_token_if_required
+      raw_response = yield(@connection[v2_path(path)])
+      JSON.parse(raw_response, symbolize_names: true)
+    rescue RestClient::ExceptionWithResponse => err
+      puts err.response
+      raise
     end
   end
 end
