@@ -1,14 +1,14 @@
 class CfoundryClient
   module Auth
+    attr_reader :token_expires_at
+
     def login(username, password)
       params = {
           client_id: @client_id,
           client_secret: @client_secret,
           username: username,
           password: password,
-          grant_type: 'password',
-          token_format: 'opaque',
-          response_type: 'token'
+          grant_type: 'password'
       }
 
       auth = 'Basic ' + Base64.encode64("#{@client_id}:#{@client_secret}")
@@ -26,7 +26,6 @@ class CfoundryClient
           client_id: @client_id,
           client_secret: @client_secret,
           grant_type: 'refresh_token',
-          token_format: 'opaque',
           refresh_token: @refresh_token
       }
       headers = { params: params }
@@ -44,7 +43,7 @@ class CfoundryClient
     private
 
     def login_api
-      @login_api ||= cloud_info[:authorization_endpoint]
+      @login_api ||= info[:authorization_endpoint]
     end
 
     def request_token(headers)

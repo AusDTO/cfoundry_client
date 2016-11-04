@@ -1,6 +1,6 @@
 class CfoundryClient
   module Info
-    def cloud_info
+    def info
       get('info')
     end
   end
