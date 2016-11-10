@@ -10,3 +10,4 @@ pkg/*
 vendor/*
 tmp/*
 spec/examples.txt
+coverage/

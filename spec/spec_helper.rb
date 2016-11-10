@@ -18,8 +18,24 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'vcr'
+require 'simplecov'
 
 RSpec.configure do |config|
+
+  unless config.files_to_run.one?
+    SimpleCov.start do
+      add_filter do |source_file|
+        source_file.lines.none? {|line| line.src.match(/\bdef\b/)}
+      end
+      #add_group 'Services', 'app/services'
+    end
+    # save to CircleCI's artifacts directory if we're on CircleCI
+    if ENV['CIRCLE_ARTIFACTS']
+      dir = File.join(ENV['CIRCLE_ARTIFACTS'], 'coverage')
+      SimpleCov.coverage_dir(dir)
+    end
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
