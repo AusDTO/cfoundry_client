@@ -3,29 +3,23 @@ require 'spec_helper'
 RSpec.describe CfoundryClient::Spaces, :vcr do
 
   include_context 'make user client'
+  let(:space) { client.spaces.each.first.dig(:metadata, :guid) }
 
   describe '#spaces' do
     subject {client.spaces}
 
-    it 'returns a paginator' do
-      is_expected.to be_a(CfoundryClient::Paginator)
-    end
-
-    it 'returns success' do
-      expect(subject.each.to_a).not_to be_empty
-    end
+    include_context 'is paginator'
   end
 
   describe '#space_apps' do
-    let(:space) { client.spaces.each.first.dig(:metadata, :guid) }
     subject {client.space_apps(space)}
 
-    it 'returns a paginator' do
-      is_expected.to be_a(CfoundryClient::Paginator)
-    end
+    include_context 'is paginator'
+  end
 
-    it 'returns success' do
-      expect(subject.each.to_a).not_to be_empty
-    end
+  describe '#space_users' do
+    subject {client.space_users(space)}
+
+    include_context 'is paginator'
   end
 end

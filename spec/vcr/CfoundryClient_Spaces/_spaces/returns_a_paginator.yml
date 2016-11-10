@@ -29,19 +29,19 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 10 Nov 2016 00:48:18 GMT
+      - Thu, 10 Nov 2016 01:09:29 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 8ac60b8b-9bf1-4890-6ce1-acb685d42be0
-      - d6e7f7a7-ed16-4dfb-6aba-fda148667ce9::684ca9ad-c9fd-4285-9a81-a4cc49163713
+      - 121f0622-207a-47f0-63aa-c1688d316d5e::ebe2fa0d-ec9a-4dbb-9ebd-5223046a4e70
+      - 861d69fd-e2fb-4a97-7024-cce7f441ff62
     body:
       encoding: UTF-8
       string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 00:48:18 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:29 GMT
 - request:
     method: post
     uri: https://login.local.pcfdev.io/oauth/token
@@ -74,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Thu, 10 Nov 2016 00:48:18 GMT
+      - Thu, 10 Nov 2016 01:09:30 GMT
       Expires:
       - '0'
       Pragma:
@@ -89,7 +89,7 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Vcap-Request-Id:
-      - 279c3a01-2f8d-4b3c-6752-d2a5e170e6c5
+      - c5d84680-99c8-42dc-772c-a14757097b05
       X-Xss-Protection:
       - 1; mode=block
       Transfer-Encoding:
@@ -97,7 +97,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
-        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"f0ee4d2592d3408397b6bf22d3490759"}'
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"4567"}'
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 00:48:18 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:30 GMT
 recorded_with: VCR 3.0.3

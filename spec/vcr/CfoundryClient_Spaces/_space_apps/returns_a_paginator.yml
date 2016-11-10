@@ -29,19 +29,19 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 10 Nov 2016 00:48:19 GMT
+      - Thu, 10 Nov 2016 01:09:30 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 441dca86-6e4d-400f-6062-506e188c849a::54c8e033-d569-4c6a-affb-f016681482c8
-      - 9a8823f8-f3b2-477d-5445-73a460c0667c
+      - 6b772bc9-2fa8-4e05-486f-7819c2624bce::cb835391-063b-4fe0-9103-5d156e1dfbef
+      - ca8b7c04-6e48-45dd-5dcf-7e5b13989fda
     body:
       encoding: UTF-8
       string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 00:48:19 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:30 GMT
 - request:
     method: post
     uri: https://login.local.pcfdev.io/oauth/token
@@ -74,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Thu, 10 Nov 2016 00:48:18 GMT
+      - Thu, 10 Nov 2016 01:09:30 GMT
       Expires:
       - '0'
       Pragma:
@@ -89,7 +89,7 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Vcap-Request-Id:
-      - 8a97c07f-6d03-4d1e-5e32-fc9f003f3289
+      - fee7d33e-99af-40d7-4b67-24e3fae40568
       X-Xss-Protection:
       - 1; mode=block
       Transfer-Encoding:
@@ -97,9 +97,9 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
-        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"d884a1922ed6448c82bfdb2ae068c9ed"}'
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"4567"}'
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 00:48:19 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:30 GMT
 - request:
     method: get
     uri: http://api.local.pcfdev.io/v2/spaces
@@ -129,14 +129,14 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 10 Nov 2016 00:48:19 GMT
+      - Thu, 10 Nov 2016 01:09:30 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 613d711c-49b4-4ae4-70cc-56573d4cea07
-      - f479f455-c26c-4424-714c-949f4ff3d9a0::d047aa05-cb17-41d8-aa49-8d81a33580bf
+      - a9baf53e-bea8-49cb-52cb-135005378236::8af2032c-abc0-4ee7-bcce-2ced497c1098
+      - e059eada-c2b3-424e-5d38-8f6434772c75
     body:
       encoding: UTF-8
       string: |-
@@ -174,5 +174,5 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 00:48:19 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:30 GMT
 recorded_with: VCR 3.0.3

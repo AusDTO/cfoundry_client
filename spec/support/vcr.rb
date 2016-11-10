@@ -13,6 +13,7 @@ VCR.configure do |c|
       json = JSON.parse(interaction.response.body)
       json['access_token'] = '0123'
       json['refresh_token'] = '6789'
+      json['jti'] = '4567'
       interaction.response.body = JSON.generate(json)
     end
   end

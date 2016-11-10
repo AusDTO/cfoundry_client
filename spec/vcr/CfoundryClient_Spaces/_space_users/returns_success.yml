@@ -29,19 +29,19 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 10 Nov 2016 01:09:30 GMT
+      - Thu, 10 Nov 2016 01:09:31 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 15f97ee1-b6fc-4120-7efc-29c295dacdf9
-      - 600e004b-cf9a-4cc4-5465-e5027c4a8732::b4dd1783-7f7a-4199-8db9-4cd8af8e71d3
+      - 92a06cf3-62c7-4943-664b-5b885d1bdbb3
+      - e1674e5d-6c3d-428a-710c-ffd17f7661b9::cd223b76-f361-4168-a1dd-229eef67b355
     body:
       encoding: UTF-8
       string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 01:09:30 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:31 GMT
 - request:
     method: post
     uri: https://login.local.pcfdev.io/oauth/token
@@ -74,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Thu, 10 Nov 2016 01:09:30 GMT
+      - Thu, 10 Nov 2016 01:09:31 GMT
       Expires:
       - '0'
       Pragma:
@@ -89,7 +89,7 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Vcap-Request-Id:
-      - 5fbc31d5-fdcf-44f8-4b78-e49b41867a4c
+      - d918b99c-c27d-478f-50c5-5a4e14aa1138
       X-Xss-Protection:
       - 1; mode=block
       Transfer-Encoding:
@@ -99,7 +99,7 @@ http_interactions:
       string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
         uaa.user cloud_controller.read password.write cloud_controller.write","jti":"4567"}'
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 01:09:30 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:31 GMT
 - request:
     method: get
     uri: http://api.local.pcfdev.io/v2/spaces
@@ -129,14 +129,14 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 10 Nov 2016 01:09:30 GMT
+      - Thu, 10 Nov 2016 01:09:31 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - b3e6512e-7c0f-48b4-4dc0-f948e38d6110::fb6967e2-de5c-4376-9e08-3cfcb9836c85
-      - f1754f07-6084-468c-4175-4d7749ef540c
+      - 14892fa3-f9d4-43a9-7354-8178f14cbc7e
+      - 67a810db-efa5-4254-6116-d6c1847e8d8d::1fa6483c-197b-40ba-8b6d-16e512ffb220
     body:
       encoding: UTF-8
       string: |-
@@ -174,10 +174,10 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 01:09:30 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:31 GMT
 - request:
     method: get
-    uri: http://api.local.pcfdev.io/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/apps
+    uri: http://api.local.pcfdev.io/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/user_roles
     body:
       encoding: US-ASCII
       string: ''
@@ -200,18 +200,18 @@ http_interactions:
       message: OK
     headers:
       Content-Length:
-      - '3943'
+      - '2457'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Thu, 10 Nov 2016 01:09:30 GMT
+      - Thu, 10 Nov 2016 01:09:31 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 17909543-16c0-41c1-5eda-44e5bb388015::d6861d62-b77c-465e-b136-aaa99e6f240a
-      - a8ffee95-c90b-44c7-60ed-644f6bca00c5
+      - 163c26b2-cf41-4dca-79c8-783592faf074
+      - 5cf67bcb-4a26-45b1-6ac6-95fac5c19817::53bef06a-1226-495f-bc74-61a6713e1f03
     body:
       encoding: UTF-8
       string: |-
@@ -223,106 +223,57 @@ http_interactions:
           "resources": [
             {
               "metadata": {
-                "guid": "a7601aaf-4bbf-462a-9879-21137c584b8c",
-                "url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c",
-                "created_at": "2016-11-04T04:00:43Z",
-                "updated_at": "2016-11-04T04:00:54Z"
+                "guid": "d2abb1c1-b3ef-47f8-b93a-f194b5f846dd",
+                "url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd",
+                "created_at": "2016-11-04T00:04:11Z",
+                "updated_at": null
               },
               "entity": {
-                "name": "helloworld-html",
-                "production": false,
-                "space_guid": "2bb3d3fc-ab40-48c4-8f20-848078f0612b",
-                "stack_guid": "db255a6c-706b-46cf-816d-d9611e3aa783",
-                "buildpack": "staticfile_buildpack",
-                "detected_buildpack": "",
-                "environment_json": {
-
-                },
-                "memory": 64,
-                "instances": 1,
-                "disk_quota": 512,
-                "state": "STARTED",
-                "version": "4ed79efd-6d51-4c2b-aef9-baf0008b85e0",
-                "command": null,
-                "console": false,
-                "debug": null,
-                "staging_task_id": "9edd1b6695224c73a6604e7ccedbbcdf",
-                "package_state": "STAGED",
-                "health_check_type": "port",
-                "health_check_timeout": null,
-                "staging_failed_reason": null,
-                "staging_failed_description": null,
-                "diego": true,
-                "docker_image": null,
-                "package_updated_at": "2016-11-04T04:00:44Z",
-                "detected_start_command": "sh boot.sh",
-                "enable_ssh": true,
-                "docker_credentials_json": {
-                  "redacted_message": "[PRIVATE DATA HIDDEN]"
-                },
-                "ports": [
-                  8080
+                "admin": 0,
+                "active": 1,
+                "default_space_guid": null,
+                "username": "admin",
+                "space_roles": [
+                  "space_developer",
+                  "space_manager"
                 ],
-                "space_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b",
-                "stack_url": "/v2/stacks/db255a6c-706b-46cf-816d-d9611e3aa783",
-                "routes_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/routes",
-                "events_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/events",
-                "service_bindings_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/service_bindings",
-                "route_mappings_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/route_mappings"
+                "spaces_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/spaces",
+                "organizations_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/organizations",
+                "managed_organizations_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/managed_organizations",
+                "billing_managed_organizations_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/billing_managed_organizations",
+                "audited_organizations_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/audited_organizations",
+                "managed_spaces_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/managed_spaces",
+                "audited_spaces_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/audited_spaces"
               }
             },
             {
               "metadata": {
-                "guid": "9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2",
-                "url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2",
-                "created_at": "2016-11-07T01:06:18Z",
-                "updated_at": "2016-11-07T01:08:40Z"
+                "guid": "3449261d-e35d-4bdb-9db5-582669d8506b",
+                "url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b",
+                "created_at": "2016-11-04T00:04:21Z",
+                "updated_at": null
               },
               "entity": {
-                "name": "foo",
-                "production": false,
-                "space_guid": "2bb3d3fc-ab40-48c4-8f20-848078f0612b",
-                "stack_guid": "db255a6c-706b-46cf-816d-d9611e3aa783",
-                "buildpack": null,
-                "detected_buildpack": null,
-                "environment_json": {
-
-                },
-                "memory": 256,
-                "instances": 1,
-                "disk_quota": 512,
-                "state": "STOPPED",
-                "version": "17b9b864-9088-4af6-861c-db6be98bf79a",
-                "command": null,
-                "console": false,
-                "debug": null,
-                "staging_task_id": "cc2e2b7820d84f20827cc4f6746eb514",
-                "package_state": "FAILED",
-                "health_check_type": "port",
-                "health_check_timeout": null,
-                "staging_failed_reason": "NoAppDetectedError",
-                "staging_failed_description": "An app was not successfully detected by any available buildpack",
-                "diego": true,
-                "docker_image": null,
-                "package_updated_at": "2016-11-07T01:06:34Z",
-                "detected_start_command": "",
-                "enable_ssh": true,
-                "docker_credentials_json": {
-                  "redacted_message": "[PRIVATE DATA HIDDEN]"
-                },
-                "ports": [
-                  8080
+                "admin": 0,
+                "active": 0,
+                "default_space_guid": null,
+                "username": "user",
+                "space_roles": [
+                  "space_developer",
+                  "space_manager",
+                  "space_auditor"
                 ],
-                "space_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b",
-                "stack_url": "/v2/stacks/db255a6c-706b-46cf-816d-d9611e3aa783",
-                "routes_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/routes",
-                "events_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/events",
-                "service_bindings_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/service_bindings",
-                "route_mappings_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/route_mappings"
+                "spaces_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/spaces",
+                "organizations_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/organizations",
+                "managed_organizations_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/managed_organizations",
+                "billing_managed_organizations_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/billing_managed_organizations",
+                "audited_organizations_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/audited_organizations",
+                "managed_spaces_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/managed_spaces",
+                "audited_spaces_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/audited_spaces"
               }
             }
           ]
         }
     http_version: 
-  recorded_at: Thu, 10 Nov 2016 01:09:30 GMT
+  recorded_at: Thu, 10 Nov 2016 01:09:31 GMT
 recorded_with: VCR 3.0.3
