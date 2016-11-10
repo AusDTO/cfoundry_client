@@ -29,25 +29,25 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Fri, 04 Nov 2016 04:05:40 GMT
+      - Wed, 09 Nov 2016 23:52:33 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - bd378dac-bb23-45a9-5461-c20b6cf928d3
-      - d533ecc8-2003-480a-4fac-5a8d3d65a227::7efb4995-bbe6-4393-9498-71176ff751d7
+      - 19abb9cb-de39-4a92-67a4-c9008c1e043e::44ef373c-24f7-4a0d-88c6-610e983c1832
+      - c8186cc8-affb-4683-771c-5a97156050d5
     body:
       encoding: UTF-8
       string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
     http_version: 
-  recorded_at: Fri, 04 Nov 2016 04:05:40 GMT
+  recorded_at: Wed, 09 Nov 2016 23:52:33 GMT
 - request:
     method: post
-    uri: https://login.local.pcfdev.io/oauth/token?client_id=cf&client_secret=&grant_type=password&password=pass&username=user
+    uri: https://login.local.pcfdev.io/oauth/token
     body:
       encoding: UTF-8
-      string: ''
+      string: client_id=cf&client_secret=&username=user&password=pass&grant_type=password
     headers:
       Accept:
       - "*/*"
@@ -57,6 +57,10 @@ http_interactions:
       - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
       Authorization:
       - Basic Y2Y6
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/x-www-form-urlencoded
       Host:
       - login.local.pcfdev.io
   response:
@@ -70,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Fri, 04 Nov 2016 04:05:39 GMT
+      - Wed, 09 Nov 2016 23:52:33 GMT
       Expires:
       - '0'
       Pragma:
@@ -85,17 +89,17 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Vcap-Request-Id:
-      - 3cc73b16-6ede-431b-5110-9f44777ab742
+      - 3d1dd0e4-415c-49e8-7d08-4deea29a3598
       X-Xss-Protection:
       - 1; mode=block
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJmZWE2ZGE2ZmFjNzg0OGMyOTk1YWI0YzkyMzljNmY1ZiIsInN1YiI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInNjb3BlIjpbIm9wZW5pZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIzNDQ5MjYxZC1lMzVkLTRiZGItOWRiNS01ODI2NjlkODUwNmIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ1c2VyIiwiZW1haWwiOiJ1c2VyIiwiYXV0aF90aW1lIjoxNDc4MjMyMzQwLCJyZXZfc2lnIjoiNGMyMTA0N2QiLCJpYXQiOjE0NzgyMzIzNDAsImV4cCI6MTQ3ODIzMjk0MCwiaXNzIjoiaHR0cHM6Ly91YWEubG9jYWwucGNmZGV2LmlvL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNmIiwib3BlbmlkIiwidWFhIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.SNupem7SQxEa9VeFnXBM67GwoDRD6s-l2i8823FrcH8RmL5N6nB4CBhi3fCh2pkq1qk39U3THjYd0Zn_C-lFf4GKXm-xIlU082HcufSkQYEiySRw1iyNrFWAk83e6pKxUDqNwJ1SV0rJdepJnA4TsGQkS0-KrDz70Qs5blPMl3w","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJmZWE2ZGE2ZmFjNzg0OGMyOTk1YWI0YzkyMzljNmY1Zi1yIiwic3ViIjoiMzQ0OTI2MWQtZTM1ZC00YmRiLTlkYjUtNTgyNjY5ZDg1MDZiIiwic2NvcGUiOlsib3BlbmlkIiwidWFhLnVzZXIiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiaWF0IjoxNDc4MjMyMzQwLCJleHAiOjE0ODA4MjQzNDAsImNpZCI6ImNmIiwiY2xpZW50X2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS5sb2NhbC5wY2ZkZXYuaW8vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJ1c2VyIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInJldl9zaWciOiI0YzIxMDQ3ZCIsImF1ZCI6WyJjZiIsIm9wZW5pZCIsInVhYSIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.RaA0yg3LFnIbJHecLKJ39cPEhS_91cbzWNXVeFU6VeBrx0LVsOtq_ZDnVHyDxzNFI9EUnmgjCHSWfcaBNQlmsDoOKzhzS8_zf8J8ffu_avae12v5Go3VFfxA9g8a9O6I3xPYXtpuAy0uaiFXwHm4hcI6frVsUMAHpVzOA2aqwc8","expires_in":599,"scope":"openid
-        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"fea6da6fac7848c2995ab4c9239c6f5f"}'
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkMTZmZjUyODMyYmU0YmM1OWU4ODJlNDY5NzkyM2M1ZCIsInN1YiI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInNjb3BlIjpbIm9wZW5pZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIzNDQ5MjYxZC1lMzVkLTRiZGItOWRiNS01ODI2NjlkODUwNmIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ1c2VyIiwiZW1haWwiOiJ1c2VyIiwiYXV0aF90aW1lIjoxNDc4NzM1NTUzLCJyZXZfc2lnIjoiNGMyMTA0N2QiLCJpYXQiOjE0Nzg3MzU1NTQsImV4cCI6MTQ3ODczNjE1NCwiaXNzIjoiaHR0cHM6Ly91YWEubG9jYWwucGNmZGV2LmlvL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNmIiwib3BlbmlkIiwidWFhIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.k-Ci-Z9iXeJ-G_makKH7mjKmCRZjflpT39glzJVrrOVMkjCrdf8MkApn1q9izLcU4rXUdHvbY-FLo0bT9w79wFvyPLiXylw5IfKr3d8YvxCB9A1ztU9H4pOtk-XSBrL3fYTIO5uNZk7HDC1mTB-g3199LKjd4XTkorTkwARRBi8","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkMTZmZjUyODMyYmU0YmM1OWU4ODJlNDY5NzkyM2M1ZC1yIiwic3ViIjoiMzQ0OTI2MWQtZTM1ZC00YmRiLTlkYjUtNTgyNjY5ZDg1MDZiIiwic2NvcGUiOlsib3BlbmlkIiwidWFhLnVzZXIiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiaWF0IjoxNDc4NzM1NTU0LCJleHAiOjE0ODEzMjc1NTQsImNpZCI6ImNmIiwiY2xpZW50X2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS5sb2NhbC5wY2ZkZXYuaW8vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJ1c2VyIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInJldl9zaWciOiI0YzIxMDQ3ZCIsImF1ZCI6WyJjZiIsIm9wZW5pZCIsInVhYSIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.KfIFXG4_5whlMLOs-fmoXN7mF3S9f4U0lMMpCE6d3V-TAOhqCfOHFJsbjB28hfpwkXZiDQrfAQBjtGPN4BY1GyqlDy2o4J_GfeuEJjpQPdT1G65iPKAdu5Px0l64Kk0ASWabQCMrth9L8VCq8UdkSsn1mhHxzfdQ8ZDmAMJ_Ad8","expires_in":599,"scope":"openid
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"d16ff52832be4bc59e882e4697923c5d"}'
     http_version: 
-  recorded_at: Fri, 04 Nov 2016 04:05:40 GMT
+  recorded_at: Wed, 09 Nov 2016 23:52:34 GMT
 - request:
     method: get
     uri: http://api.local.pcfdev.io/v2/spaces
@@ -112,7 +116,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJmZWE2ZGE2ZmFjNzg0OGMyOTk1YWI0YzkyMzljNmY1ZiIsInN1YiI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInNjb3BlIjpbIm9wZW5pZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIzNDQ5MjYxZC1lMzVkLTRiZGItOWRiNS01ODI2NjlkODUwNmIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ1c2VyIiwiZW1haWwiOiJ1c2VyIiwiYXV0aF90aW1lIjoxNDc4MjMyMzQwLCJyZXZfc2lnIjoiNGMyMTA0N2QiLCJpYXQiOjE0NzgyMzIzNDAsImV4cCI6MTQ3ODIzMjk0MCwiaXNzIjoiaHR0cHM6Ly91YWEubG9jYWwucGNmZGV2LmlvL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNmIiwib3BlbmlkIiwidWFhIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.SNupem7SQxEa9VeFnXBM67GwoDRD6s-l2i8823FrcH8RmL5N6nB4CBhi3fCh2pkq1qk39U3THjYd0Zn_C-lFf4GKXm-xIlU082HcufSkQYEiySRw1iyNrFWAk83e6pKxUDqNwJ1SV0rJdepJnA4TsGQkS0-KrDz70Qs5blPMl3w
+      - bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkMTZmZjUyODMyYmU0YmM1OWU4ODJlNDY5NzkyM2M1ZCIsInN1YiI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInNjb3BlIjpbIm9wZW5pZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIzNDQ5MjYxZC1lMzVkLTRiZGItOWRiNS01ODI2NjlkODUwNmIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ1c2VyIiwiZW1haWwiOiJ1c2VyIiwiYXV0aF90aW1lIjoxNDc4NzM1NTUzLCJyZXZfc2lnIjoiNGMyMTA0N2QiLCJpYXQiOjE0Nzg3MzU1NTQsImV4cCI6MTQ3ODczNjE1NCwiaXNzIjoiaHR0cHM6Ly91YWEubG9jYWwucGNmZGV2LmlvL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNmIiwib3BlbmlkIiwidWFhIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.k-Ci-Z9iXeJ-G_makKH7mjKmCRZjflpT39glzJVrrOVMkjCrdf8MkApn1q9izLcU4rXUdHvbY-FLo0bT9w79wFvyPLiXylw5IfKr3d8YvxCB9A1ztU9H4pOtk-XSBrL3fYTIO5uNZk7HDC1mTB-g3199LKjd4XTkorTkwARRBi8
       Host:
       - api.local.pcfdev.io
   response:
@@ -125,14 +129,14 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Fri, 04 Nov 2016 04:05:40 GMT
+      - Wed, 09 Nov 2016 23:52:34 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 2256f043-fa63-4af1-47cf-c8fbe346cda5::7aafa4ec-9ca1-4860-bba9-e4d863c96127
-      - 77c25f06-b86d-4cb9-486b-eb138635e32d
+      - 47b7671e-8ca1-4316-45b8-e31850f0aa41::5b16f80d-53b3-4791-82b5-1ab368c44e4a
+      - e47f9c6d-0c1d-42d7-4127-11d03b735d3a
     body:
       encoding: UTF-8
       string: |-
@@ -170,5 +174,155 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Fri, 04 Nov 2016 04:05:40 GMT
+  recorded_at: Wed, 09 Nov 2016 23:52:34 GMT
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/apps
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkMTZmZjUyODMyYmU0YmM1OWU4ODJlNDY5NzkyM2M1ZCIsInN1YiI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInNjb3BlIjpbIm9wZW5pZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIzNDQ5MjYxZC1lMzVkLTRiZGItOWRiNS01ODI2NjlkODUwNmIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ1c2VyIiwiZW1haWwiOiJ1c2VyIiwiYXV0aF90aW1lIjoxNDc4NzM1NTUzLCJyZXZfc2lnIjoiNGMyMTA0N2QiLCJpYXQiOjE0Nzg3MzU1NTQsImV4cCI6MTQ3ODczNjE1NCwiaXNzIjoiaHR0cHM6Ly91YWEubG9jYWwucGNmZGV2LmlvL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNmIiwib3BlbmlkIiwidWFhIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.k-Ci-Z9iXeJ-G_makKH7mjKmCRZjflpT39glzJVrrOVMkjCrdf8MkApn1q9izLcU4rXUdHvbY-FLo0bT9w79wFvyPLiXylw5IfKr3d8YvxCB9A1ztU9H4pOtk-XSBrL3fYTIO5uNZk7HDC1mTB-g3199LKjd4XTkorTkwARRBi8
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '3943'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 09 Nov 2016 23:52:34 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 36911f17-4be9-44ee-4dea-6f462b4c0e1c::18af9b35-9339-4e07-9d84-433300a1b9cf
+      - e102a1a6-11dc-455e-6c58-bce27d1a060d
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "total_results": 2,
+          "total_pages": 1,
+          "prev_url": null,
+          "next_url": null,
+          "resources": [
+            {
+              "metadata": {
+                "guid": "a7601aaf-4bbf-462a-9879-21137c584b8c",
+                "url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c",
+                "created_at": "2016-11-04T04:00:43Z",
+                "updated_at": "2016-11-04T04:00:54Z"
+              },
+              "entity": {
+                "name": "helloworld-html",
+                "production": false,
+                "space_guid": "2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_guid": "db255a6c-706b-46cf-816d-d9611e3aa783",
+                "buildpack": "staticfile_buildpack",
+                "detected_buildpack": "",
+                "environment_json": {
+
+                },
+                "memory": 64,
+                "instances": 1,
+                "disk_quota": 512,
+                "state": "STARTED",
+                "version": "4ed79efd-6d51-4c2b-aef9-baf0008b85e0",
+                "command": null,
+                "console": false,
+                "debug": null,
+                "staging_task_id": "9edd1b6695224c73a6604e7ccedbbcdf",
+                "package_state": "STAGED",
+                "health_check_type": "port",
+                "health_check_timeout": null,
+                "staging_failed_reason": null,
+                "staging_failed_description": null,
+                "diego": true,
+                "docker_image": null,
+                "package_updated_at": "2016-11-04T04:00:44Z",
+                "detected_start_command": "sh boot.sh",
+                "enable_ssh": true,
+                "docker_credentials_json": {
+                  "redacted_message": "[PRIVATE DATA HIDDEN]"
+                },
+                "ports": [
+                  8080
+                ],
+                "space_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_url": "/v2/stacks/db255a6c-706b-46cf-816d-d9611e3aa783",
+                "routes_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/routes",
+                "events_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/events",
+                "service_bindings_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/service_bindings",
+                "route_mappings_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/route_mappings"
+              }
+            },
+            {
+              "metadata": {
+                "guid": "9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2",
+                "url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2",
+                "created_at": "2016-11-07T01:06:18Z",
+                "updated_at": "2016-11-07T01:08:40Z"
+              },
+              "entity": {
+                "name": "foo",
+                "production": false,
+                "space_guid": "2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_guid": "db255a6c-706b-46cf-816d-d9611e3aa783",
+                "buildpack": null,
+                "detected_buildpack": null,
+                "environment_json": {
+
+                },
+                "memory": 256,
+                "instances": 1,
+                "disk_quota": 512,
+                "state": "STOPPED",
+                "version": "17b9b864-9088-4af6-861c-db6be98bf79a",
+                "command": null,
+                "console": false,
+                "debug": null,
+                "staging_task_id": "cc2e2b7820d84f20827cc4f6746eb514",
+                "package_state": "FAILED",
+                "health_check_type": "port",
+                "health_check_timeout": null,
+                "staging_failed_reason": "NoAppDetectedError",
+                "staging_failed_description": "An app was not successfully detected by any available buildpack",
+                "diego": true,
+                "docker_image": null,
+                "package_updated_at": "2016-11-07T01:06:34Z",
+                "detected_start_command": "",
+                "enable_ssh": true,
+                "docker_credentials_json": {
+                  "redacted_message": "[PRIVATE DATA HIDDEN]"
+                },
+                "ports": [
+                  8080
+                ],
+                "space_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_url": "/v2/stacks/db255a6c-706b-46cf-816d-d9611e3aa783",
+                "routes_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/routes",
+                "events_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/events",
+                "service_bindings_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/service_bindings",
+                "route_mappings_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/route_mappings"
+              }
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Wed, 09 Nov 2016 23:52:34 GMT
 recorded_with: VCR 3.0.3

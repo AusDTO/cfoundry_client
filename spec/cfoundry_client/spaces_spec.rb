@@ -18,7 +18,7 @@ RSpec.describe CfoundryClient::Spaces, :vcr do
 
   describe '#space_apps' do
     let(:space) { client.spaces.each.first.dig(:metadata, :guid) }
-    subject {client.spaces}
+    subject {client.space_apps(space)}
 
     it 'returns a paginator' do
       is_expected.to be_a(CfoundryClient::Paginator)

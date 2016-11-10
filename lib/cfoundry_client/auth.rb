@@ -12,8 +12,8 @@ class CfoundryClient
       }
 
       auth = 'Basic ' + Base64.encode64("#{@client_id}:#{@client_secret}")
-      headers = { Authorization: auth, params: params }
-      request_token(headers)
+      headers = { Authorization: auth }
+      request_token(params, headers)
     end
 
     def logged_in?
@@ -28,8 +28,7 @@ class CfoundryClient
           grant_type: 'refresh_token',
           refresh_token: @refresh_token
       }
-      headers = { params: params }
-      request_token(headers)
+      request_token(params)
     end
 
     def token_expires_soon?
@@ -46,9 +45,9 @@ class CfoundryClient
       @login_api ||= info[:authorization_endpoint]
     end
 
-    def request_token(headers)
+    def request_token(params, headers={})
       response = RestClient::Request.execute(method: :post, url: "#{login_api}/oauth/token",
-                                             headers: headers, verify_ssl: @verify_ssl)
+                                             payload: params, headers: headers, verify_ssl: @verify_ssl)
       response = JSON::parse(response, symbolize_names: true)
       @authorization = "#{response[:token_type]} #{response[:access_token]}"
       @token_expires_at = Time.now + response[:expires_in]
