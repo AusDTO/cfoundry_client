@@ -29,25 +29,25 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 09 Nov 2016 23:52:32 GMT
+      - Thu, 10 Nov 2016 00:48:19 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 3428166d-a41d-4edc-78ca-d71929d648f6
-      - 94080f24-94f2-47f8-4ef3-02a0c4be6509::1dbe0417-e37c-45ce-964c-ff43473f35d7
+      - 5ef0331b-1f8b-40de-6451-8980c746e963::f01d7818-81e6-4d31-bd57-bc84c77fd412
+      - a6ba2430-527a-4303-5a82-72afe1cd41f9
     body:
       encoding: UTF-8
       string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
     http_version: 
-  recorded_at: Wed, 09 Nov 2016 23:52:32 GMT
+  recorded_at: Thu, 10 Nov 2016 00:48:18 GMT
 - request:
     method: post
     uri: https://login.local.pcfdev.io/oauth/token
     body:
       encoding: UTF-8
-      string: client_id=cf&client_secret=&username=user&password=pass&grant_type=password
+      string: client_id=cf&client_secret=&username=user&password=&grant_type=password
     headers:
       Accept:
       - "*/*"
@@ -56,7 +56,7 @@ http_interactions:
       User-Agent:
       - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
       Authorization:
-      - Basic Y2Y6
+      - basic 0123
       Content-Length:
       - '75'
       Content-Type:
@@ -74,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 09 Nov 2016 23:52:32 GMT
+      - Thu, 10 Nov 2016 00:48:18 GMT
       Expires:
       - '0'
       Pragma:
@@ -89,17 +89,17 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Vcap-Request-Id:
-      - f633972d-47fd-4e77-5de3-0616c4d50a7a
+      - ea738a15-b64d-4d69-489f-9f754539441f
       X-Xss-Protection:
       - 1; mode=block
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0OTdiYzdlZTAyMDQ0YzgyOTI0OGVmYWM3MjljMGY0NyIsInN1YiI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInNjb3BlIjpbIm9wZW5pZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIzNDQ5MjYxZC1lMzVkLTRiZGItOWRiNS01ODI2NjlkODUwNmIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ1c2VyIiwiZW1haWwiOiJ1c2VyIiwiYXV0aF90aW1lIjoxNDc4NzM1NTUyLCJyZXZfc2lnIjoiNGMyMTA0N2QiLCJpYXQiOjE0Nzg3MzU1NTIsImV4cCI6MTQ3ODczNjE1MiwiaXNzIjoiaHR0cHM6Ly91YWEubG9jYWwucGNmZGV2LmlvL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNmIiwib3BlbmlkIiwidWFhIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.rQg299vZWd6ODCMezJKaN1s3ZQYr6QbVtDlAenmm89B8ntJebm9-HiBd18-Nf_jJSDpkKY-VYBKKkFKsYWIUlKfg-asQGiQxBUztCO0I4dZ1tsw-jfds5821jS9Myqwy-NMn7d0eZKpiZgDMh0zSaRbjPsFajB2UEQzlOY1Wf8Q","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0OTdiYzdlZTAyMDQ0YzgyOTI0OGVmYWM3MjljMGY0Ny1yIiwic3ViIjoiMzQ0OTI2MWQtZTM1ZC00YmRiLTlkYjUtNTgyNjY5ZDg1MDZiIiwic2NvcGUiOlsib3BlbmlkIiwidWFhLnVzZXIiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiaWF0IjoxNDc4NzM1NTUyLCJleHAiOjE0ODEzMjc1NTIsImNpZCI6ImNmIiwiY2xpZW50X2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS5sb2NhbC5wY2ZkZXYuaW8vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJ1c2VyIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInJldl9zaWciOiI0YzIxMDQ3ZCIsImF1ZCI6WyJjZiIsIm9wZW5pZCIsInVhYSIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.sLcW6051S3aGDt-DztKmoxJ610p8neXhozKskYQSz2xTjTXrIIKfL0R0ypmvs2P1QX6zGpMqGRGte4zfd1LYyOBndlugpDTeQgHKJnmz3krBb2pA-HzAf9PzCtKmmcT8Z5aKw-k8ttxZ9e6CGc_V3apBb0e42EIovO3PlS5LkGc","expires_in":599,"scope":"openid
-        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"497bc7ee02044c829248efac729c0f47"}'
+      string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"200214cab26c4e3590f6db39dea24cda"}'
     http_version: 
-  recorded_at: Wed, 09 Nov 2016 23:52:33 GMT
+  recorded_at: Thu, 10 Nov 2016 00:48:19 GMT
 - request:
     method: get
     uri: http://api.local.pcfdev.io/v2/spaces
@@ -116,7 +116,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0OTdiYzdlZTAyMDQ0YzgyOTI0OGVmYWM3MjljMGY0NyIsInN1YiI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInNjb3BlIjpbIm9wZW5pZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIzNDQ5MjYxZC1lMzVkLTRiZGItOWRiNS01ODI2NjlkODUwNmIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ1c2VyIiwiZW1haWwiOiJ1c2VyIiwiYXV0aF90aW1lIjoxNDc4NzM1NTUyLCJyZXZfc2lnIjoiNGMyMTA0N2QiLCJpYXQiOjE0Nzg3MzU1NTIsImV4cCI6MTQ3ODczNjE1MiwiaXNzIjoiaHR0cHM6Ly91YWEubG9jYWwucGNmZGV2LmlvL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNmIiwib3BlbmlkIiwidWFhIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.rQg299vZWd6ODCMezJKaN1s3ZQYr6QbVtDlAenmm89B8ntJebm9-HiBd18-Nf_jJSDpkKY-VYBKKkFKsYWIUlKfg-asQGiQxBUztCO0I4dZ1tsw-jfds5821jS9Myqwy-NMn7d0eZKpiZgDMh0zSaRbjPsFajB2UEQzlOY1Wf8Q
+      - bearer 0123
       Host:
       - api.local.pcfdev.io
   response:
@@ -129,14 +129,14 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 09 Nov 2016 23:52:32 GMT
+      - Thu, 10 Nov 2016 00:48:19 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - 89ab2d31-08f6-47db-4fbb-893700c49172::b32ff889-2098-4dab-adef-443a7c600fb8
-      - e759393c-695f-4c29-42b2-a3cbd1081f1f
+      - 60b30c8f-c24b-4df2-64e1-c4ca41dc15df::295119ea-2163-4269-9365-31d0eb6449b2
+      - d918f96f-c1b9-4720-7742-0b4fd0dc1228
     body:
       encoding: UTF-8
       string: |-
@@ -174,5 +174,5 @@ http_interactions:
           ]
         }
     http_version: 
-  recorded_at: Wed, 09 Nov 2016 23:52:33 GMT
+  recorded_at: Thu, 10 Nov 2016 00:48:19 GMT
 recorded_with: VCR 3.0.3

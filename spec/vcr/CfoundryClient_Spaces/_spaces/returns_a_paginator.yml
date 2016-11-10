@@ -29,25 +29,25 @@ http_interactions:
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 09 Nov 2016 23:52:30 GMT
+      - Thu, 10 Nov 2016 00:48:18 GMT
       Server:
       - nginx
       X-Content-Type-Options:
       - nosniff
       X-Vcap-Request-Id:
-      - cb62c942-2621-466a-4316-a266298616c0::a15d3f68-d2fd-40c6-bc34-49943b0bbe89
-      - d9aac242-68a7-4f5a-60f9-b65a29c61b01
+      - 8ac60b8b-9bf1-4890-6ce1-acb685d42be0
+      - d6e7f7a7-ed16-4dfb-6aba-fda148667ce9::684ca9ad-c9fd-4285-9a81-a4cc49163713
     body:
       encoding: UTF-8
       string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
     http_version: 
-  recorded_at: Wed, 09 Nov 2016 23:52:30 GMT
+  recorded_at: Thu, 10 Nov 2016 00:48:18 GMT
 - request:
     method: post
     uri: https://login.local.pcfdev.io/oauth/token
     body:
       encoding: UTF-8
-      string: client_id=cf&client_secret=&username=user&password=pass&grant_type=password
+      string: client_id=cf&client_secret=&username=user&password=&grant_type=password
     headers:
       Accept:
       - "*/*"
@@ -56,7 +56,7 @@ http_interactions:
       User-Agent:
       - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
       Authorization:
-      - Basic Y2Y6
+      - basic 0123
       Content-Length:
       - '75'
       Content-Type:
@@ -74,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Date:
-      - Wed, 09 Nov 2016 23:52:32 GMT
+      - Thu, 10 Nov 2016 00:48:18 GMT
       Expires:
       - '0'
       Pragma:
@@ -89,15 +89,15 @@ http_interactions:
       X-Frame-Options:
       - DENY
       X-Vcap-Request-Id:
-      - fee3627d-1236-4772-40bb-3b6dc7925ed0
+      - 279c3a01-2f8d-4b3c-6752-d2a5e170e6c5
       X-Xss-Protection:
       - 1; mode=block
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0NzY2MTE1MTk1MmI0ZGIyYThmMzFlNzZlM2IxN2M3YyIsInN1YiI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInNjb3BlIjpbIm9wZW5pZCIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiIzNDQ5MjYxZC1lMzVkLTRiZGItOWRiNS01ODI2NjlkODUwNmIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ1c2VyIiwiZW1haWwiOiJ1c2VyIiwiYXV0aF90aW1lIjoxNDc4NzM1NTUyLCJyZXZfc2lnIjoiNGMyMTA0N2QiLCJpYXQiOjE0Nzg3MzU1NTIsImV4cCI6MTQ3ODczNjE1MiwiaXNzIjoiaHR0cHM6Ly91YWEubG9jYWwucGNmZGV2LmlvL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNmIiwib3BlbmlkIiwidWFhIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.vo4R0xf2vTXWfpxq7rL1IRCuePsyZOCBts_ADnKGyCrTO23SqO9nW_m4Lge6yN0plttIKf9fgKiRm8_sxiprwhba_wCNV844EGNRD1G-_iTcfWDLhQ8dqwWU9_iv261MNuOdPGnAQSJVE-Unuq9SHnDzS7MkzgWDk8jThFyLYx0","token_type":"bearer","refresh_token":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0NzY2MTE1MTk1MmI0ZGIyYThmMzFlNzZlM2IxN2M3Yy1yIiwic3ViIjoiMzQ0OTI2MWQtZTM1ZC00YmRiLTlkYjUtNTgyNjY5ZDg1MDZiIiwic2NvcGUiOlsib3BlbmlkIiwidWFhLnVzZXIiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiaWF0IjoxNDc4NzM1NTUyLCJleHAiOjE0ODEzMjc1NTIsImNpZCI6ImNmIiwiY2xpZW50X2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS5sb2NhbC5wY2ZkZXYuaW8vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX25hbWUiOiJ1c2VyIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6IjM0NDkyNjFkLWUzNWQtNGJkYi05ZGI1LTU4MjY2OWQ4NTA2YiIsInJldl9zaWciOiI0YzIxMDQ3ZCIsImF1ZCI6WyJjZiIsIm9wZW5pZCIsInVhYSIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.seGZKbR2CeWdBnqNJ7f-gkX-aG0wHpUAqcHWcl7ZlHRYPwzzkWHi4kvvQOEjFaJ3jmBj4A6zB0vLTUwv0LsB717b9snInYWAE73jHzbzBQWP7JMcy_-PId97q5nzTsRf3WzoUBmT4kjZ7_mGDxhTgP3J6CBaQEQZb_ci-xEfzik","expires_in":599,"scope":"openid
-        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"47661151952b4db2a8f31e76e3b17c7c"}'
+      string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"f0ee4d2592d3408397b6bf22d3490759"}'
     http_version: 
-  recorded_at: Wed, 09 Nov 2016 23:52:32 GMT
+  recorded_at: Thu, 10 Nov 2016 00:48:18 GMT
 recorded_with: VCR 3.0.3
