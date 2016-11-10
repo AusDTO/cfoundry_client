@@ -1,0 +1,279 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - ''
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '596'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Nov 2016 02:36:11 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 6fd80b54-8fbf-4b85-45ab-958b3192d0f6
+      - 92e5c663-c97e-4c8b-6429-d7898db7e32f::d0d81130-0ef1-4914-8eba-e95a5c591aed
+    body:
+      encoding: UTF-8
+      string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
+    http_version: 
+  recorded_at: Thu, 10 Nov 2016 02:42:28 GMT
+- request:
+    method: post
+    uri: https://login.local.pcfdev.io/oauth/token
+    body:
+      encoding: UTF-8
+      string: client_id=cf&client_secret=&username=user&password=&grant_type=password
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Authorization:
+      - basic 0123
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - login.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      - no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 10 Nov 2016 02:36:10 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      - no-cache
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Vcap-Request-Id:
+      - dd89907c-730b-4444-4dfe-0b3a0de9b618
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"4567"}'
+    http_version: 
+  recorded_at: Thu, 10 Nov 2016 02:42:28 GMT
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/spaces
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - bearer 0123
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '1488'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Nov 2016 02:36:11 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 0cca57e4-6fb1-4c37-6dd1-634c5f22dbfe::78f92128-8f92-43d9-8f25-6ffd7d1ae411
+      - 60554164-5634-4546-5c51-111f1d6f0b07
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "total_results": 1,
+          "total_pages": 1,
+          "prev_url": null,
+          "next_url": null,
+          "resources": [
+            {
+              "metadata": {
+                "guid": "2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "created_at": "2016-11-04T00:04:14Z",
+                "updated_at": null
+              },
+              "entity": {
+                "name": "pcfdev-space",
+                "organization_guid": "9b69d9d6-f040-4a0a-bf19-b88809faecb9",
+                "space_quota_definition_guid": null,
+                "allow_ssh": true,
+                "organization_url": "/v2/organizations/9b69d9d6-f040-4a0a-bf19-b88809faecb9",
+                "developers_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/developers",
+                "managers_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/managers",
+                "auditors_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/auditors",
+                "apps_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/apps",
+                "routes_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/routes",
+                "domains_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/domains",
+                "service_instances_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/service_instances",
+                "app_events_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/app_events",
+                "events_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/events",
+                "security_groups_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/security_groups"
+              }
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Thu, 10 Nov 2016 02:42:28 GMT
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b/user_roles
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - bearer 0123
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '2457'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 10 Nov 2016 02:36:11 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 1c5f7b43-7b8b-4290-51f7-c99583908dda
+      - 2107f0c1-60d5-43a5-7a09-4f6f5e710afa::a048c8ac-5afd-424b-903b-b88ef7fdaaa9
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "total_results": 2,
+          "total_pages": 1,
+          "prev_url": null,
+          "next_url": null,
+          "resources": [
+            {
+              "metadata": {
+                "guid": "d2abb1c1-b3ef-47f8-b93a-f194b5f846dd",
+                "url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd",
+                "created_at": "2016-11-04T00:04:11Z",
+                "updated_at": null
+              },
+              "entity": {
+                "admin": 0,
+                "active": 1,
+                "default_space_guid": null,
+                "username": "admin",
+                "space_roles": [
+                  "space_developer",
+                  "space_manager"
+                ],
+                "spaces_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/spaces",
+                "organizations_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/organizations",
+                "managed_organizations_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/managed_organizations",
+                "billing_managed_organizations_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/billing_managed_organizations",
+                "audited_organizations_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/audited_organizations",
+                "managed_spaces_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/managed_spaces",
+                "audited_spaces_url": "/v2/users/d2abb1c1-b3ef-47f8-b93a-f194b5f846dd/audited_spaces"
+              }
+            },
+            {
+              "metadata": {
+                "guid": "3449261d-e35d-4bdb-9db5-582669d8506b",
+                "url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b",
+                "created_at": "2016-11-04T00:04:21Z",
+                "updated_at": null
+              },
+              "entity": {
+                "admin": 0,
+                "active": 0,
+                "default_space_guid": null,
+                "username": "user",
+                "space_roles": [
+                  "space_developer",
+                  "space_manager",
+                  "space_auditor"
+                ],
+                "spaces_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/spaces",
+                "organizations_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/organizations",
+                "managed_organizations_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/managed_organizations",
+                "billing_managed_organizations_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/billing_managed_organizations",
+                "audited_organizations_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/audited_organizations",
+                "managed_spaces_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/managed_spaces",
+                "audited_spaces_url": "/v2/users/3449261d-e35d-4bdb-9db5-582669d8506b/audited_spaces"
+              }
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Thu, 10 Nov 2016 02:42:28 GMT
+recorded_with: VCR 3.0.3

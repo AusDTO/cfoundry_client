@@ -14,7 +14,7 @@ class CfoundryClient
 
     ##
     # See https://apidocs.cloudfoundry.org/245/spaces/retrieving_the_roles_of_all_users_in_the_space.html
-    def space_users(space_guid, params = {})
+    def space_user_roles(space_guid, params = {})
       CfoundryClient::Paginator.new(self, "spaces/#{space_guid}/user_roles", params)
     end
   end

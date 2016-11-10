@@ -6,6 +6,7 @@ require 'cfoundry_client/auth'
 require 'cfoundry_client/constants'
 require 'cfoundry_client/errors'
 require 'cfoundry_client/info'
+require 'cfoundry_client/orgs'
 require 'cfoundry_client/paginator'
 require 'cfoundry_client/request'
 require 'cfoundry_client/spaces'
@@ -16,6 +17,7 @@ class CfoundryClient
   include Constants
   include Errors
   include Info
+  include Orgs
   include Request
   include Spaces
 

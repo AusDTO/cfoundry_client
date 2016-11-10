@@ -17,8 +17,8 @@ RSpec.describe CfoundryClient::Spaces, :vcr do
     include_context 'is paginator'
   end
 
-  describe '#space_users' do
-    subject {client.space_users(space)}
+  describe '#space_user_roles' do
+    subject {client.space_user_roles(space)}
 
     include_context 'is paginator'
   end
