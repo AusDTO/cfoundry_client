@@ -25,5 +25,9 @@ class CfoundryClient
     def all
       return each.to_a
     end
+
+    def first
+      return each.first
+    end
   end
 end
