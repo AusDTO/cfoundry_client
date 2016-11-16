@@ -29,5 +29,16 @@ class CfoundryClient
     def first
       return each.first
     end
+
+    def each_guid
+      return enum_for(:each_guid) unless block_given?
+      each do |entry|
+        yield entry.dig(:metadata, :guid)
+      end
+    end
+
+    def first_guid
+      each_guid.first
+    end
   end
 end
