@@ -1,0 +1,303 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - ''
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '596'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 16 Nov 2016 06:11:34 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 9382cc8f-7cbf-4969-4b70-1780c92c78db::3ac2d6fe-0e69-423c-bffa-fcc3cbd23065
+      - c5b0bc85-a9a3-496b-69e5-f22eeb4fb2e5
+    body:
+      encoding: UTF-8
+      string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
+    http_version: 
+  recorded_at: Wed, 16 Nov 2016 06:11:34 GMT
+- request:
+    method: post
+    uri: https://login.local.pcfdev.io/oauth/token
+    body:
+      encoding: UTF-8
+      string: client_id=cf&client_secret=&username=user&password=&grant_type=password
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Authorization:
+      - basic 0123
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - login.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      - no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 16 Nov 2016 06:11:34 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      - no-cache
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Vcap-Request-Id:
+      - c9d314b2-28c5-4213-7d8b-2447fdf19c3b
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"4567"}'
+    http_version: 
+  recorded_at: Wed, 16 Nov 2016 06:11:35 GMT
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/apps
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - bearer 0123
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '5882'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 16 Nov 2016 06:11:35 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - a1aa0f46-9c06-4004-5230-c80dd5f2c660::5f6eac07-5ee0-4a53-80bb-7389c467e073
+      - dff48ff0-4571-4d00-565e-671a9459b3e6
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "total_results": 3,
+          "total_pages": 1,
+          "prev_url": null,
+          "next_url": null,
+          "resources": [
+            {
+              "metadata": {
+                "guid": "a7601aaf-4bbf-462a-9879-21137c584b8c",
+                "url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c",
+                "created_at": "2016-11-04T04:00:43Z",
+                "updated_at": "2016-11-15T23:47:41Z"
+              },
+              "entity": {
+                "name": "helloworld-html",
+                "production": false,
+                "space_guid": "2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_guid": "db255a6c-706b-46cf-816d-d9611e3aa783",
+                "buildpack": "staticfile_buildpack",
+                "detected_buildpack": "",
+                "environment_json": {
+
+                },
+                "memory": 64,
+                "instances": 1,
+                "disk_quota": 512,
+                "state": "STARTED",
+                "version": "7108a4c6-3b02-4ba8-a8c7-36c8f9349339",
+                "command": null,
+                "console": false,
+                "debug": null,
+                "staging_task_id": "7126205eb94c47cf8398193fe78a318d",
+                "package_state": "STAGED",
+                "health_check_type": "port",
+                "health_check_timeout": null,
+                "staging_failed_reason": null,
+                "staging_failed_description": null,
+                "diego": true,
+                "docker_image": null,
+                "package_updated_at": "2016-11-15T04:46:59Z",
+                "detected_start_command": "sh boot.sh",
+                "enable_ssh": true,
+                "docker_credentials_json": {
+                  "redacted_message": "[PRIVATE DATA HIDDEN]"
+                },
+                "ports": [
+                  8080
+                ],
+                "space_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_url": "/v2/stacks/db255a6c-706b-46cf-816d-d9611e3aa783",
+                "routes_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/routes",
+                "events_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/events",
+                "service_bindings_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/service_bindings",
+                "route_mappings_url": "/v2/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/route_mappings"
+              }
+            },
+            {
+              "metadata": {
+                "guid": "9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2",
+                "url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2",
+                "created_at": "2016-11-07T01:06:18Z",
+                "updated_at": "2016-11-07T01:08:40Z"
+              },
+              "entity": {
+                "name": "foo",
+                "production": false,
+                "space_guid": "2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_guid": "db255a6c-706b-46cf-816d-d9611e3aa783",
+                "buildpack": null,
+                "detected_buildpack": null,
+                "environment_json": {
+
+                },
+                "memory": 256,
+                "instances": 1,
+                "disk_quota": 512,
+                "state": "STOPPED",
+                "version": "17b9b864-9088-4af6-861c-db6be98bf79a",
+                "command": null,
+                "console": false,
+                "debug": null,
+                "staging_task_id": "cc2e2b7820d84f20827cc4f6746eb514",
+                "package_state": "FAILED",
+                "health_check_type": "port",
+                "health_check_timeout": null,
+                "staging_failed_reason": "NoAppDetectedError",
+                "staging_failed_description": "An app was not successfully detected by any available buildpack",
+                "diego": true,
+                "docker_image": null,
+                "package_updated_at": "2016-11-07T01:06:34Z",
+                "detected_start_command": "",
+                "enable_ssh": true,
+                "docker_credentials_json": {
+                  "redacted_message": "[PRIVATE DATA HIDDEN]"
+                },
+                "ports": [
+                  8080
+                ],
+                "space_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_url": "/v2/stacks/db255a6c-706b-46cf-816d-d9611e3aa783",
+                "routes_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/routes",
+                "events_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/events",
+                "service_bindings_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/service_bindings",
+                "route_mappings_url": "/v2/apps/9d5fe105-4e89-485d-a1f0-2e50cf7aa8e2/route_mappings"
+              }
+            },
+            {
+              "metadata": {
+                "guid": "a8874e4f-f803-4863-9cc6-c9253e1440e2",
+                "url": "/v2/apps/a8874e4f-f803-4863-9cc6-c9253e1440e2",
+                "created_at": "2016-11-16T00:23:44Z",
+                "updated_at": "2016-11-16T00:23:52Z"
+              },
+              "entity": {
+                "name": "foo-helloworld-html",
+                "production": false,
+                "space_guid": "2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_guid": "db255a6c-706b-46cf-816d-d9611e3aa783",
+                "buildpack": "staticfile_buildpack",
+                "detected_buildpack": "",
+                "environment_json": {
+                  "QAFIRE_ENVIRONMENT": true
+                },
+                "memory": 64,
+                "instances": 1,
+                "disk_quota": 512,
+                "state": "STARTED",
+                "version": "855a67d2-18fd-4557-ac65-309f48299d78",
+                "command": null,
+                "console": false,
+                "debug": null,
+                "staging_task_id": "c553c6b223194930898ffb56e1359c09",
+                "package_state": "STAGED",
+                "health_check_type": "port",
+                "health_check_timeout": null,
+                "staging_failed_reason": null,
+                "staging_failed_description": null,
+                "diego": true,
+                "docker_image": null,
+                "package_updated_at": "2016-11-16T00:23:47Z",
+                "detected_start_command": "sh boot.sh",
+                "enable_ssh": true,
+                "docker_credentials_json": {
+                  "redacted_message": "[PRIVATE DATA HIDDEN]"
+                },
+                "ports": [
+                  8080
+                ],
+                "space_url": "/v2/spaces/2bb3d3fc-ab40-48c4-8f20-848078f0612b",
+                "stack_url": "/v2/stacks/db255a6c-706b-46cf-816d-d9611e3aa783",
+                "routes_url": "/v2/apps/a8874e4f-f803-4863-9cc6-c9253e1440e2/routes",
+                "events_url": "/v2/apps/a8874e4f-f803-4863-9cc6-c9253e1440e2/events",
+                "service_bindings_url": "/v2/apps/a8874e4f-f803-4863-9cc6-c9253e1440e2/service_bindings",
+                "route_mappings_url": "/v2/apps/a8874e4f-f803-4863-9cc6-c9253e1440e2/route_mappings"
+              }
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Wed, 16 Nov 2016 06:11:35 GMT
+recorded_with: VCR 3.0.3

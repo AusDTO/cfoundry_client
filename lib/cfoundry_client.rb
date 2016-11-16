@@ -3,6 +3,7 @@ require 'json'
 require 'base64'
 require 'beefcake'
 
+require 'cfoundry_client/apps'
 require 'cfoundry_client/auth'
 require 'cfoundry_client/constants'
 require 'cfoundry_client/errors'
@@ -11,10 +12,15 @@ require 'cfoundry_client/logging'
 require 'cfoundry_client/orgs'
 require 'cfoundry_client/paginator'
 require 'cfoundry_client/request'
+require 'cfoundry_client/service_bindings'
+require 'cfoundry_client/service_instances'
+require 'cfoundry_client/service_plans'
+require 'cfoundry_client/services'
 require 'cfoundry_client/spaces'
 require 'cfoundry_client/version'
 
 class CfoundryClient
+  include Apps
   include Auth
   include Constants
   include Errors
@@ -23,6 +29,10 @@ class CfoundryClient
   include Orgs
   include Request
   include Spaces
+  include ServiceBindings
+  include ServiceInstances
+  include ServicePlans
+  include Services
 
   def initialize(url, options = {})
     @url = url

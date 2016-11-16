@@ -7,9 +7,9 @@ class CfoundryClient
       end
     end
 
-    def post(path, body = {})
+    def post(path, body = {}, params = {})
       wrap_request(path) do |connection|
-        connection.post(body.to_json, headers)
+        connection.post(body.to_json, headers.merge(params: params))
       end
     end
 

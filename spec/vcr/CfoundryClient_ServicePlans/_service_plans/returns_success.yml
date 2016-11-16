@@ -1,0 +1,233 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - ''
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '596'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 16 Nov 2016 06:11:37 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 775ee58b-8666-4907-53cf-b835adbe1cae::876e777e-0359-41c2-84be-d5ef9e3242c3
+      - fc33096d-6d73-40fa-4340-d945de16af72
+    body:
+      encoding: UTF-8
+      string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
+    http_version: 
+  recorded_at: Wed, 16 Nov 2016 06:11:37 GMT
+- request:
+    method: post
+    uri: https://login.local.pcfdev.io/oauth/token
+    body:
+      encoding: UTF-8
+      string: client_id=cf&client_secret=&username=user&password=&grant_type=password
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Authorization:
+      - basic 0123
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - login.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      - no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 16 Nov 2016 06:11:37 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      - no-cache
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Vcap-Request-Id:
+      - bc63e6f7-2b46-489d-6156-0d31b6e8a7f5
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"4567"}'
+    http_version: 
+  recorded_at: Wed, 16 Nov 2016 06:11:37 GMT
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/service_plans
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - bearer 0123
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '3914'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Wed, 16 Nov 2016 06:11:37 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 382f41d0-1cbe-4bb6-71e5-f35a1692d7d0
+      - 41f6936f-9c1d-426f-59ea-d262b11364bd::7f22128f-2092-4500-b4d3-67c13bdf530b
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "total_results": 4,
+          "total_pages": 1,
+          "prev_url": null,
+          "next_url": null,
+          "resources": [
+            {
+              "metadata": {
+                "guid": "bd44ad63-c247-496c-b798-d625ba619e7d",
+                "url": "/v2/service_plans/bd44ad63-c247-496c-b798-d625ba619e7d",
+                "created_at": "2016-11-04T00:04:32Z",
+                "updated_at": "2016-11-16T06:07:20Z"
+              },
+              "entity": {
+                "name": "512mb",
+                "free": true,
+                "description": "PCF Dev MySQL Server",
+                "service_guid": "679a5fd5-6cc7-4014-af1b-b05386f95fae",
+                "extra": "{\"costs\":[{\"amount\":{\"usd\":0.0},\"unit\":\"MONTH\"}],\"bullets\":[\"PCF Dev MySQL Server\",\"512 MB storage\",\"10 concurrent connections\"],\"displayName\":\"512mb\"}",
+                "unique_id": "ab08f1bc-e6fc-4b56-a767-ee0fea6e3f20",
+                "public": true,
+                "active": true,
+                "service_url": "/v2/services/679a5fd5-6cc7-4014-af1b-b05386f95fae",
+                "service_instances_url": "/v2/service_plans/bd44ad63-c247-496c-b798-d625ba619e7d/service_instances"
+              }
+            },
+            {
+              "metadata": {
+                "guid": "7893bef7-2b38-4f19-842e-0a1b0caf1c1a",
+                "url": "/v2/service_plans/7893bef7-2b38-4f19-842e-0a1b0caf1c1a",
+                "created_at": "2016-11-04T00:04:32Z",
+                "updated_at": "2016-11-16T06:07:20Z"
+              },
+              "entity": {
+                "name": "1gb",
+                "free": true,
+                "description": "PCF Dev MySQL Server",
+                "service_guid": "679a5fd5-6cc7-4014-af1b-b05386f95fae",
+                "extra": "{\"costs\":[{\"amount\":{\"usd\":0.0},\"unit\":\"MONTH\"}],\"bullets\":[\"PCF Dev MySQL Server\",\"1024 MB storage\",\"20 concurrent connections\"],\"displayName\":\"1gb\"}",
+                "unique_id": "11d0aa36-dcec-4021-85f5-ea4d9a5c8342",
+                "public": true,
+                "active": true,
+                "service_url": "/v2/services/679a5fd5-6cc7-4014-af1b-b05386f95fae",
+                "service_instances_url": "/v2/service_plans/7893bef7-2b38-4f19-842e-0a1b0caf1c1a/service_instances"
+              }
+            },
+            {
+              "metadata": {
+                "guid": "3e3506d2-a2c1-42c7-be5b-7df60f6facfd",
+                "url": "/v2/service_plans/3e3506d2-a2c1-42c7-be5b-7df60f6facfd",
+                "created_at": "2016-11-04T00:04:38Z",
+                "updated_at": "2016-11-16T06:07:24Z"
+              },
+              "entity": {
+                "name": "standard",
+                "free": true,
+                "description": "Provides a multi-tenant RabbitMQ cluster",
+                "service_guid": "9b8e36fb-0c25-4765-99dd-278af4484f05",
+                "extra": "{\"displayName\":\"Standard\",\"costs\":[{\"amount\":{\"usd\":0.0},\"unit\":\"MONTHLY\"}],\"bullets\":[\"RabbitMQ 3.5.7\",\"Multi-tenant\"]}",
+                "unique_id": "4e816145-4e71-4e24-a402-0c686b868e2d",
+                "public": true,
+                "active": true,
+                "service_url": "/v2/services/9b8e36fb-0c25-4765-99dd-278af4484f05",
+                "service_instances_url": "/v2/service_plans/3e3506d2-a2c1-42c7-be5b-7df60f6facfd/service_instances"
+              }
+            },
+            {
+              "metadata": {
+                "guid": "7762ce64-378e-460f-b828-868676174449",
+                "url": "/v2/service_plans/7762ce64-378e-460f-b828-868676174449",
+                "created_at": "2016-11-04T00:04:40Z",
+                "updated_at": "2016-11-16T06:07:25Z"
+              },
+              "entity": {
+                "name": "shared-vm",
+                "free": true,
+                "description": "This plan provides a single Redis process on a shared VM, which is suitable for development and testing workloads",
+                "service_guid": "e18856d9-088e-44a1-bfb5-5ab7beaa8a10",
+                "extra": "{\"bullets\":[\"Each instance shares the same VM\",\"Single dedicated Redis process\",\"Suitable for development & testing workloads\"],\"displayName\":\"Shared-VM\"}",
+                "unique_id": "C210CA06-E7E5-4F5D-A5AA-7A2C51CC290E",
+                "public": true,
+                "active": true,
+                "service_url": "/v2/services/e18856d9-088e-44a1-bfb5-5ab7beaa8a10",
+                "service_instances_url": "/v2/service_plans/7762ce64-378e-460f-b828-868676174449/service_instances"
+              }
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Wed, 16 Nov 2016 06:11:37 GMT
+recorded_with: VCR 3.0.3
