@@ -1,0 +1,315 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - ''
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '596'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 15 Nov 2016 23:58:10 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 1a0838c1-daaf-478a-7f0a-4f689bdf3087
+      - 6ad8a285-9339-49ab-74de-4e94ff56208e::50678e62-da00-4708-a7d0-2ddb40197c1c
+    body:
+      encoding: UTF-8
+      string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 23:58:10 GMT
+- request:
+    method: post
+    uri: https://login.local.pcfdev.io/oauth/token
+    body:
+      encoding: UTF-8
+      string: client_id=cf&client_secret=&username=user&password=&grant_type=password
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Authorization:
+      - basic 0123
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - login.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      - no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Tue, 15 Nov 2016 23:58:09 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      - no-cache
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Vcap-Request-Id:
+      - 32a60b25-2b73-4ecc-5800-c03c37f19e31
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"4567"}'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 23:58:10 GMT
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - bearer 0123
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '642'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 15 Nov 2016 23:58:10 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 01731dbb-4b16-4c1e-517f-3a8e1deff14d
+      - e8fd44da-30ae-41e0-6041-b2779c74a2fa::76a249b4-d85a-4b27-9bab-f338be989c64
+    body:
+      encoding: UTF-8
+      string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443","user":"3449261d-e35d-4bdb-9db5-582669d8506b"}'
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 23:58:10 GMT
+- request:
+    method: get
+    uri: https://doppler.local.pcfdev.io/apps/a7601aaf-4bbf-462a-9879-21137c584b8c/recentlogs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - bearer 0123
+      Host:
+      - doppler.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - multipart/x-protobuf; boundary=8c32f82908e1d297f110b640a2a1b7d71eaf4f2bad3b90b8d6f73543158c
+      Date:
+      - Tue, 15 Nov 2016 23:58:10 GMT
+      X-Vcap-Request-Id:
+      - 0d9b4110-a517-4e8e-555d-27da9706c31a
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        LS04YzMyZjgyOTA4ZTFkMjk3ZjExMGI2NDBhMmExYjdkNzFlYWY0ZjJiYWQz
+        YjkwYjhkNmY3MzU0MzE1OGMNCg0KCgNyZXAQBTC2+rS/16vXwxRCXwojRG93
+        bmxvYWRpbmcgc3RhdGljZmlsZV9idWlsZHBhY2suLi4QARj/8LS/16vXwxQi
+        JGE3NjAxYWFmLTRiYmYtNDYyYS05ODc5LTIxMTM3YzU4NGI4YyoDU1RHMgEw
+        agZwY2ZkZXZyBnBjZmRldnoBMIIBCTEwLjAuMi4xNQ0KLS04YzMyZjgyOTA4
+        ZTFkMjk3ZjExMGI2NDBhMmExYjdkNzFlYWY0ZjJiYWQzYjkwYjhkNmY3MzU0
+        MzE1OGMNCg0KCgNyZXAQBTDbtfbE16vXwxRCTgoSQ3JlYXRpbmcgY29udGFp
+        bmVyEAEY7bL2xNer18MUIiRhNzYwMWFhZi00YmJmLTQ2MmEtOTg3OS0yMTEz
+        N2M1ODRiOGMqA1NURzIBMGoGcGNmZGV2cgZwY2ZkZXZ6ATCCAQkxMC4wLjIu
+        MTUNCi0tOGMzMmY4MjkwOGUxZDI5N2YxMTBiNjQwYTJhMWI3ZDcxZWFmNGYy
+        YmFkM2I5MGI4ZDZmNzM1NDMxNThjDQoNCgoDcmVwEAUw25jyxNer18MUQlsK
+        H0Rvd25sb2FkZWQgc3RhdGljZmlsZV9idWlsZHBhY2sQARiVjfLE16vXwxQi
+        JGE3NjAxYWFmLTRiYmYtNDYyYS05ODc5LTIxMTM3YzU4NGI4YyoDU1RHMgEw
+        agZwY2ZkZXZyBnBjZmRldnoBMIIBCTEwLjAuMi4xNQ0KLS04YzMyZjgyOTA4
+        ZTFkMjk3ZjExMGI2NDBhMmExYjdkNzFlYWY0ZjJiYWQzYjkwYjhkNmY3MzU0
+        MzE1OGMNCg0KCgNyZXAQBTDTxJaA2qvXwxRCWgoeU3VjY2Vzc2Z1bGx5IGNy
+        ZWF0ZWQgY29udGFpbmVyEAEYpLyWgNqr18MUIiRhNzYwMWFhZi00YmJmLTQ2
+        MmEtOTg3OS0yMTEzN2M1ODRiOGMqA1NURzIBMGoGcGNmZGV2cgZwY2ZkZXZ6
+        ATCCAQkxMC4wLjIuMTUNCi0tOGMzMmY4MjkwOGUxZDI5N2YxMTBiNjQwYTJh
+        MWI3ZDcxZWFmNGYyYmFkM2I5MGI4ZDZmNzM1NDMxNThjDQoNCgoDcmVwEAUw
+        v4i1gNqr18MUQlYKGkRvd25sb2FkaW5nIGFwcCBwYWNrYWdlLi4uEAEYqoG1
+        gNqr18MUIiRhNzYwMWFhZi00YmJmLTQ2MmEtOTg3OS0yMTEzN2M1ODRiOGMq
+        A1NURzIBMGoGcGNmZGV2cgZwY2ZkZXZ6ATCCAQkxMC4wLjIuMTUNCi0tOGMz
+        MmY4MjkwOGUxZDI5N2YxMTBiNjQwYTJhMWI3ZDcxZWFmNGYyYmFkM2I5MGI4
+        ZDZmNzM1NDMxNThjDQoNCgoDcmVwEAUwuKvYidqr18MUQmAKJERvd25sb2Fk
+        aW5nIGJ1aWxkIGFydGlmYWN0cyBjYWNoZS4uLhABGO6m2Inaq9fDFCIkYTc2
+        MDFhYWYtNGJiZi00NjJhLTk4NzktMjExMzdjNTg0YjhjKgNTVEcyATBqBnBj
+        ZmRldnIGcGNmZGV2egEwggEJMTAuMC4yLjE1DQotLThjMzJmODI5MDhlMWQy
+        OTdmMTEwYjY0MGEyYTFiN2Q3MWVhZjRmMmJhZDNiOTBiOGQ2ZjczNTQzMTU4
+        Yw0KDQoKA3JlcBAFMIzhzonaq9fDFEJaCh5Eb3dubG9hZGVkIGFwcCBwYWNr
+        YWdlICgxNC4xSykQARiT186J2qvXwxQiJGE3NjAxYWFmLTRiYmYtNDYyYS05
+        ODc5LTIxMTM3YzU4NGI4YyoDU1RHMgEwagZwY2ZkZXZyBnBjZmRldnoBMIIB
+        CTEwLjAuMi4xNQ0KLS04YzMyZjgyOTA4ZTFkMjk3ZjExMGI2NDBhMmExYjdk
+        NzFlYWY0ZjJiYWQzYjkwYjhkNmY3MzU0MzE1OGMNCg0KCgNyZXAQBTDZqYuS
+        2qvXwxRCRgoKU3RhZ2luZy4uLhABGPqci5Laq9fDFCIkYTc2MDFhYWYtNGJi
+        Zi00NjJhLTk4NzktMjExMzdjNTg0YjhjKgNTVEcyATBqBnBjZmRldnIGcGNm
+        ZGV2egEwggEJMTAuMC4yLjE1DQotLThjMzJmODI5MDhlMWQyOTdmMTEwYjY0
+        MGEyYTFiN2Q3MWVhZjRmMmJhZDNiOTBiOGQ2ZjczNTQzMTU4Yw0KDQoKA3Jl
+        cBAFMPjoh5Laq9fDFEJjCidEb3dubG9hZGVkIGJ1aWxkIGFydGlmYWN0cyBj
+        YWNoZSAoMTA3QikQARjo4IeS2qvXwxQiJGE3NjAxYWFmLTRiYmYtNDYyYS05
+        ODc5LTIxMTM3YzU4NGI4YyoDU1RHMgEwagZwY2ZkZXZyBnBjZmRldnoBMIIB
+        CTEwLjAuMi4xNQ0KLS04YzMyZjgyOTA4ZTFkMjk3ZjExMGI2NDBhMmExYjdk
+        NzFlYWY0ZjJiYWQzYjkwYjhkNmY3MzU0MzE1OGMNCg0KCgNyZXAQBTDIr4zK
+        2qvXwxRCXAogLS0tLS0tLT4gQnVpbGRwYWNrIHZlcnNpb24gMS4zLjYQARir
+        oIzK2qvXwxQiJGE3NjAxYWFmLTRiYmYtNDYyYS05ODc5LTIxMTM3YzU4NGI4
+        YyoDU1RHMgEwagZwY2ZkZXZyBnBjZmRldnoBMIIBCTEwLjAuMi4xNQ0KLS04
+        YzMyZjgyOTA4ZTFkMjk3ZjExMGI2NDBhMmExYjdkNzFlYWY0ZjJiYWQzYjkw
+        YjhkNmY3MzU0MzE1OGMNCg0KCgNyZXAQBTDI9uz/2qvXwxRC7gEKsQFEb3du
+        bG9hZGVkIFtmaWxlOi8vL3RtcC9idWlsZHBhY2tzL2VjM2M3YWE3OWE5N2Q4
+        ZTAxM2JhYmE2MTU5MjdlOTc1L2RlcGVuZGVuY2llcy9odHRwc19fX3Bpdm90
+        YWwtYnVpbGRwYWNrcy5zMy5hbWF6b25hd3MuY29tX2NvbmNvdXJzZS1iaW5h
+        cmllc19uZ2lueF9uZ2lueC0xLjkuMTQtbGludXgteDY0LnRnel0QARir5+z/
+        2qvXwxQiJGE3NjAxYWFmLTRiYmYtNDYyYS05ODc5LTIxMTM3YzU4NGI4YyoD
+        U1RHMgEwagZwY2ZkZXZyBnBjZmRldnoBMIIBCTEwLjAuMi4xNQ0KLS04YzMy
+        ZjgyOTA4ZTFkMjk3ZjExMGI2NDBhMmExYjdkNzFlYWY0ZjJiYWQzYjkwYjhk
+        NmY3MzU0MzE1OGMNCg0KCgNyZXAQBTCY3KyB26vXwxRCVAoYLS0tLS0+IFVz
+        aW5nIHJvb3QgZm9sZGVyEAEY2s2sgdur18MUIiRhNzYwMWFhZi00YmJmLTQ2
+        MmEtOTg3OS0yMTEzN2M1ODRiOGMqA1NURzIBMGoGcGNmZGV2cgZwY2ZkZXZ6
+        ATCCAQkxMC4wLjIuMTUNCi0tOGMzMmY4MjkwOGUxZDI5N2YxMTBiNjQwYTJh
+        MWI3ZDcxZWFmNGYyYmFkM2I5MGI4ZDZmNzM1NDMxNThjDQoNCgoDcmVwEAUw
+        1NrQgdur18MUQmUKKS0tLS0tPiBDb3B5aW5nIHByb2plY3QgZmlsZXMgaW50
+        byBwdWJsaWMvEAEYuM7Qgdur18MUIiRhNzYwMWFhZi00YmJmLTQ2MmEtOTg3
+        OS0yMTEzN2M1ODRiOGMqA1NURzIBMGoGcGNmZGV2cgZwY2ZkZXZ6ATCCAQkx
+        MC4wLjIuMTUNCi0tOGMzMmY4MjkwOGUxZDI5N2YxMTBiNjQwYTJhMWI3ZDcx
+        ZWFmNGYyYmFkM2I5MGI4ZDZmNzM1NDMxNThjDQoNCgoDcmVwEAUwvtikhtur
+        18MUQlMKFy0tLS0tPiBTZXR0aW5nIHVwIG5naW54EAEYq8mkhtur18MUIiRh
+        NzYwMWFhZi00YmJmLTQ2MmEtOTg3OS0yMTEzN2M1ODRiOGMqA1NURzIBMGoG
+        cGNmZGV2cgZwY2ZkZXZ6ATCCAQkxMC4wLjIuMTUNCi0tOGMzMmY4MjkwOGUx
+        ZDI5N2YxMTBiNjQwYTJhMWI3ZDcxZWFmNGYyYmFkM2I5MGI4ZDZmNzM1NDMx
+        NThjDQoNCgoDcmVwEAUw8fqQ5t2r18MUQl4KIlVwbG9hZGluZyBidWlsZCBh
+        cnRpZmFjdHMgY2FjaGUuLi4QARiG95Dm3avXwxQiJGE3NjAxYWFmLTRiYmYt
+        NDYyYS05ODc5LTIxMTM3YzU4NGI4YyoDU1RHMgEwagZwY2ZkZXZyBnBjZmRl
+        dnoBMIIBCTEwLjAuMi4xNQ0KLS04YzMyZjgyOTA4ZTFkMjk3ZjExMGI2NDBh
+        MmExYjdkNzFlYWY0ZjJiYWQzYjkwYjhkNmY3MzU0MzE1OGMNCg0KCgNyZXAQ
+        BTCHhIHm3avXwxRCSQoNRXhpdCBzdGF0dXMgMBABGJz8gObdq9fDFCIkYTc2
+        MDFhYWYtNGJiZi00NjJhLTk4NzktMjExMzdjNTg0YjhjKgNTVEcyATBqBnBj
+        ZmRldnIGcGNmZGV2egEwggEJMTAuMC4yLjE1DQotLThjMzJmODI5MDhlMWQy
+        OTdmMTEwYjY0MGEyYTFiN2Q3MWVhZjRmMmJhZDNiOTBiOGQ2ZjczNTQzMTU4
+        Yw0KDQoKA3JlcBAFMMXIhebdq9fDFEJMChBTdGFnaW5nIGNvbXBsZXRlEAEY
+        x8SF5t2r18MUIiRhNzYwMWFhZi00YmJmLTQ2MmEtOTg3OS0yMTEzN2M1ODRi
+        OGMqA1NURzIBMGoGcGNmZGV2cgZwY2ZkZXZ6ATCCAQkxMC4wLjIuMTUNCi0t
+        OGMzMmY4MjkwOGUxZDI5N2YxMTBiNjQwYTJhMWI3ZDcxZWFmNGYyYmFkM2I5
+        MGI4ZDZmNzM1NDMxNThjDQoNCgoDcmVwEAUwhumG5t2r18MUQmcKK1VwbG9h
+        ZGluZyBkcm9wbGV0LCBidWlsZCBhcnRpZmFjdHMgY2FjaGUuLi4QARiZ5Ybm
+        3avXwxQiJGE3NjAxYWFmLTRiYmYtNDYyYS05ODc5LTIxMTM3YzU4NGI4YyoD
+        U1RHMgEwagZwY2ZkZXZyBnBjZmRldnoBMIIBCTEwLjAuMi4xNQ0KLS04YzMy
+        ZjgyOTA4ZTFkMjk3ZjExMGI2NDBhMmExYjdkNzFlYWY0ZjJiYWQzYjkwYjhk
+        NmY3MzU0MzE1OGMNCg0KCgNyZXAQBTDByZ3m3avXwxRCUAoUVXBsb2FkaW5n
+        IGRyb3BsZXQuLi4QARiiw53m3avXwxQiJGE3NjAxYWFmLTRiYmYtNDYyYS05
+        ODc5LTIxMTM3YzU4NGI4YyoDU1RHMgEwagZwY2ZkZXZyBnBjZmRldnoBMIIB
+        CTEwLjAuMi4xNQ0KLS04YzMyZjgyOTA4ZTFkMjk3ZjExMGI2NDBhMmExYjdk
+        NzFlYWY0ZjJiYWQzYjkwYjhkNmY3MzU0MzE1OGMNCg0KCgNyZXAQBTDZybn+
+        3avXwxRCYQolVXBsb2FkZWQgYnVpbGQgYXJ0aWZhY3RzIGNhY2hlICgxMDdC
+        KRABGPa7uf7dq9fDFCIkYTc2MDFhYWYtNGJiZi00NjJhLTk4NzktMjExMzdj
+        NTg0YjhjKgNTVEcyATBqBnBjZmRldnIGcGNmZGV2egEwggEJMTAuMC4yLjE1
+        DQotLThjMzJmODI5MDhlMWQyOTdmMTEwYjY0MGEyYTFiN2Q3MWVhZjRmMmJh
+        ZDNiOTBiOGQ2ZjczNTQzMTU4Yw0KDQoKA3JlcBAFMOi5//zhq9fDFEJTChdV
+        cGxvYWRlZCBkcm9wbGV0ICgyLjVNKRABGIiw//zhq9fDFCIkYTc2MDFhYWYt
+        NGJiZi00NjJhLTk4NzktMjExMzdjNTg0YjhjKgNTVEcyATBqBnBjZmRldnIG
+        cGNmZGV2egEwggEJMTAuMC4yLjE1DQotLThjMzJmODI5MDhlMWQyOTdmMTEw
+        YjY0MGEyYTFiN2Q3MWVhZjRmMmJhZDNiOTBiOGQ2ZjczNTQzMTU4Yw0KDQoK
+        A3JlcBAFMO7jwP3hq9fDFEJOChJVcGxvYWRpbmcgY29tcGxldGUQARjS2MD9
+        4avXwxQiJGE3NjAxYWFmLTRiYmYtNDYyYS05ODc5LTIxMTM3YzU4NGI4YyoD
+        U1RHMgEwagZwY2ZkZXZyBnBjZmRldnoBMIIBCTEwLjAuMi4xNQ0KLS04YzMy
+        ZjgyOTA4ZTFkMjk3ZjExMGI2NDBhMmExYjdkNzFlYWY0ZjJiYWQzYjkwYjhk
+        NmY3MzU0MzE1OGMNCg0KCgNyZXAQBTD/7cGL46vXwxRCTwoSQ3JlYXRpbmcg
+        Y29udGFpbmVyEAEY7uLBi+Or18MUIiRhNzYwMWFhZi00YmJmLTQ2MmEtOTg3
+        OS0yMTEzN2M1ODRiOGMqBENFTEwyATBqBnBjZmRldnIGcGNmZGV2egEwggEJ
+        MTAuMC4yLjE1DQotLThjMzJmODI5MDhlMWQyOTdmMTEwYjY0MGEyYTFiN2Q3
+        MWVhZjRmMmJhZDNiOTBiOGQ2ZjczNTQzMTU4Yw0KDQoKA3JlcBAFMMKnuJbm
+        q9fDFEJbCh5TdWNjZXNzZnVsbHkgY3JlYXRlZCBjb250YWluZXIQARjJl7iW
+        5qvXwxQiJGE3NjAxYWFmLTRiYmYtNDYyYS05ODc5LTIxMTM3YzU4NGI4YyoE
+        Q0VMTDIBMGoGcGNmZGV2cgZwY2ZkZXZ6ATCCAQkxMC4wLjIuMTUNCi0tOGMz
+        MmY4MjkwOGUxZDI5N2YxMTBiNjQwYTJhMWI3ZDcxZWFmNGYyYmFkM2I5MGI4
+        ZDZmNzM1NDMxNThjDQoNCgoDcmVwEAUwkOeZs+er18MUQmQKJ1N0YXJ0aW5n
+        IGhlYWx0aCBtb25pdG9yaW5nIG9mIGNvbnRhaW5lchABGKbembPnq9fDFCIk
+        YTc2MDFhYWYtNGJiZi00NjJhLTk4NzktMjExMzdjNTg0YjhjKgRDRUxMMgEw
+        agZwY2ZkZXZyBnBjZmRldnoBMIIBCTEwLjAuMi4xNQ0KLS04YzMyZjgyOTA4
+        ZTFkMjk3ZjExMGI2NDBhMmExYjdkNzFlYWY0ZjJiYWQzYjkwYjhkNmY3MzU0
+        MzE1OGMNCg0KCgNyZXAQBTD0l/LR6avXwxRCVQoYQ29udGFpbmVyIGJlY2Ft
+        ZSBoZWFsdGh5EAEYqY3y0emr18MUIiRhNzYwMWFhZi00YmJmLTQ2MmEtOTg3
+        OS0yMTEzN2M1ODRiOGMqBENFTEwyATBqBnBjZmRldnIGcGNmZGV2egEwggEJ
+        MTAuMC4yLjE1DQotLThjMzJmODI5MDhlMWQyOTdmMTEwYjY0MGEyYTFiN2Q3
+        MWVhZjRmMmJhZDNiOTBiOGQ2ZjczNTQzMTU4Yw0KDQoKA3JlcBAFMIaGg/Wd
+        rNfDFEJKCg1FeGl0IHN0YXR1cyAwEAEYiv6C9Z2s18MUIiRhNzYwMWFhZi00
+        YmJmLTQ2MmEtOTg3OS0yMTEzN2M1ODRiOGMqBENFTEwyATBqBnBjZmRldnIG
+        cGNmZGV2egEwggEJMTAuMC4yLjE1DQotLThjMzJmODI5MDhlMWQyOTdmMTEw
+        YjY0MGEyYTFiN2Q3MWVhZjRmMmJhZDNiOTBiOGQ2ZjczNTQzMTU4Yw0KDQoK
+        A3JlcBAFMLTG8vadrNfDFEJJCg1FeGl0IHN0YXR1cyAwEAEY7rDy9p2s18MU
+        IiRhNzYwMWFhZi00YmJmLTQ2MmEtOTg3OS0yMTEzN2M1ODRiOGMqA0FQUDIB
+        MGoGcGNmZGV2cgZwY2ZkZXZ6ATCCAQkxMC4wLjIuMTUNCi0tOGMzMmY4Mjkw
+        OGUxZDI5N2YxMTBiNjQwYTJhMWI3ZDcxZWFmNGYyYmFkM2I5MGI4ZDZmNzM1
+        NDMxNThjLS0NCg==
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 23:58:10 GMT
+recorded_with: VCR 3.0.3

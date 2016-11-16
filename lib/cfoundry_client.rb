@@ -1,11 +1,13 @@
 require 'rest-client'
 require 'json'
 require 'base64'
+require 'beefcake'
 
 require 'cfoundry_client/auth'
 require 'cfoundry_client/constants'
 require 'cfoundry_client/errors'
 require 'cfoundry_client/info'
+require 'cfoundry_client/logging'
 require 'cfoundry_client/orgs'
 require 'cfoundry_client/paginator'
 require 'cfoundry_client/request'
@@ -17,6 +19,7 @@ class CfoundryClient
   include Constants
   include Errors
   include Info
+  include Logging
   include Orgs
   include Request
   include Spaces

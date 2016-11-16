@@ -25,8 +25,6 @@ class CfoundryClient
       end
     end
 
-    private
-
     def headers
       {
           content_type: :json,
@@ -34,6 +32,8 @@ class CfoundryClient
           authorization: @authorization
       }
     end
+
+    private
 
     def v2_path(path)
       if path =~ /^[\/]?v2/

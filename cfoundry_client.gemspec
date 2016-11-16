@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.add_runtime_dependency 'rest-client'
+  s.add_runtime_dependency 'beefcake'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rdoc'
   s.add_development_dependency 'vcr'

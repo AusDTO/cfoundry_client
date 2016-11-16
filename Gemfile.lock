@@ -2,12 +2,14 @@ PATH
   remote: .
   specs:
     cfoundry_client (0.0.0)
+      beefcake
       rest-client
 
 GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.4.0)
+    beefcake (1.2.0)
     builder (3.2.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
