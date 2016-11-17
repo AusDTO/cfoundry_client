@@ -15,5 +15,11 @@ class CfoundryClient
       body[:space_guid] = space_guid
       post('service_instances', body, params)
     end
+
+    ##
+    # https://apidocs.cloudfoundry.org/246/service_instances/delete_a_service_instance.html
+    def delete_service_instance(service_instance_guid, additional_params = {})
+      delete("service_instances/#{service_instance_guid}", additional_params)
+    end
   end
 end

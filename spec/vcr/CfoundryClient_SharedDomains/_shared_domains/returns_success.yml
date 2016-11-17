@@ -1,0 +1,166 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - ''
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '596'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 17 Nov 2016 00:41:29 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 0f011fec-3917-452a-5a05-7633bccba747::ea9b0337-3053-4b4d-86bf-e2d8cf2e3b3c
+      - 86ef6890-b056-49ed-6e30-c3e23472c890
+    body:
+      encoding: UTF-8
+      string: '{"name":"pcfdev","build":"788020ed6e326f98d2489f08d9cae171aba7d71d","support":"pcfdev@pivotal.io","version":0,"description":"","authorization_endpoint":"https://login.local.pcfdev.io","token_endpoint":"https://uaa.local.pcfdev.io","min_cli_version":null,"min_recommended_cli_version":null,"api_version":"2.54.0","app_ssh_endpoint":"ssh.local.pcfdev.io:2222","app_ssh_host_key_fingerprint":"a6:d1:08:0b:b0:cb:9b:5f:c4:ba:44:2a:97:26:19:8a","app_ssh_oauth_client":"ssh-proxy","logging_endpoint":"wss://loggregator.local.pcfdev.io:443","doppler_logging_endpoint":"wss://doppler.local.pcfdev.io:443"}'
+    http_version: 
+  recorded_at: Thu, 17 Nov 2016 00:41:29 GMT
+- request:
+    method: post
+    uri: https://login.local.pcfdev.io/oauth/token
+    body:
+      encoding: UTF-8
+      string: client_id=cf&client_secret=&username=user&password=&grant_type=password
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Authorization:
+      - basic 0123
+      Content-Length:
+      - '75'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - login.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      - no-store
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 17 Nov 2016 00:41:28 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      - no-cache
+      Server:
+      - Apache-Coyote/1.1
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Vcap-Request-Id:
+      - b3e6a8cd-79d4-409e-5cd4-3ea2d073b738
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"0123","token_type":"bearer","refresh_token":"6789","expires_in":599,"scope":"openid
+        uaa.user cloud_controller.read password.write cloud_controller.write","jti":"4567"}'
+    http_version: 
+  recorded_at: Thu, 17 Nov 2016 00:41:29 GMT
+- request:
+    method: get
+    uri: http://api.local.pcfdev.io/v2/shared_domains
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (darwin15.0.0 x86_64) ruby/2.3.1p112
+      Content-Type:
+      - application/json
+      Authorization:
+      - bearer 0123
+      Host:
+      - api.local.pcfdev.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '498'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 17 Nov 2016 00:41:29 GMT
+      Server:
+      - nginx
+      X-Content-Type-Options:
+      - nosniff
+      X-Vcap-Request-Id:
+      - 1b780e70-41ac-46b5-7a90-e545442bd671::758947b2-848c-4458-a377-c499029c3015
+      - 7622a1dc-212a-424f-4b9a-3ba058d83ff7
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "total_results": 1,
+          "total_pages": 1,
+          "prev_url": null,
+          "next_url": null,
+          "resources": [
+            {
+              "metadata": {
+                "guid": "64439c78-aaba-4a04-8771-7d5d2fa068c2",
+                "url": "/v2/shared_domains/64439c78-aaba-4a04-8771-7d5d2fa068c2",
+                "created_at": "2016-11-03T23:59:58Z",
+                "updated_at": "2016-11-16T06:05:00Z"
+              },
+              "entity": {
+                "name": "local.pcfdev.io",
+                "router_group_guid": null,
+                "router_group_type": null
+              }
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Thu, 17 Nov 2016 00:41:29 GMT
+recorded_with: VCR 3.0.3
